@@ -15,7 +15,7 @@ public class OrdenCompra {
 
     private Date fecha;
 
-    @OneToOne
+    @ManyToOne
     private Cliente cliente;
 
     @OneToMany(mappedBy = "ordenDeCompra")
