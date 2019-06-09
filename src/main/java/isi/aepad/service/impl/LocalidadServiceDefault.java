@@ -1,10 +1,7 @@
 package isi.aepad.service.impl;
 
-import isi.aepad.domain.Cliente;
 import isi.aepad.domain.Localidad;
-import isi.aepad.repository.ClienteRepository;
 import isi.aepad.repository.LocalidadRepository;
-import isi.aepad.service.ClienteService;
 import isi.aepad.service.LocalidadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

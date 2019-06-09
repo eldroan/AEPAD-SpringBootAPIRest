@@ -1,10 +1,7 @@
 package isi.aepad.service.impl;
 
-import isi.aepad.domain.Cliente;
 import isi.aepad.domain.MedioDePago;
-import isi.aepad.repository.ClienteRepository;
 import isi.aepad.repository.MedioDePagoRepository;
-import isi.aepad.service.ClienteService;
 import isi.aepad.service.MedioDePagoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
