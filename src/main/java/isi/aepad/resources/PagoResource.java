@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/pago")
+@RequestMapping("/api")
 public class PagoResource {
 
     @Autowired

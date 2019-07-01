@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/producto")
+@RequestMapping("/api")
 public class ProductoResource {
 
     @Autowired
@@ -30,6 +30,8 @@ public class ProductoResource {
 
     @PostMapping("producto")
     public ResponseEntity<Producto> crear(@RequestBody Producto body, UriComponentsBuilder builder){
+
+        System.out.println("HOLA!");
         Producto creado = this.service.guardar(body);
 
         if(creado == null){

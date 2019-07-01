@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/localidad")
+@RequestMapping("/api")
 public class LocalidadResource {
 
     @Autowired

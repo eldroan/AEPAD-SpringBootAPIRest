@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/pedido")
+@RequestMapping("/api")
 public class PedidoResource {
 
     @Autowired

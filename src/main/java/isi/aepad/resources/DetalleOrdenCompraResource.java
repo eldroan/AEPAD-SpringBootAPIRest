@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/detalleordencompra")
+@RequestMapping("/api")
 public class DetalleOrdenCompraResource {
 
     @Autowired
