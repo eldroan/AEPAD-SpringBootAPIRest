@@ -1,6 +1,9 @@
 package isi.aepad.domain;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 import java.util.List;
 
@@ -19,6 +22,7 @@ public class OrdenCompra {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "ordenDeCompra")
+    //@JsonIgnore
     private List<DetalleOrdenCompra> detalleOrdenCompras;
 
     //--- Getters & Setters ---//
