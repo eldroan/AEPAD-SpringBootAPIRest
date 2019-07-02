@@ -31,7 +31,6 @@ public class ProductoResource {
     @PostMapping("producto")
     public ResponseEntity<Producto> crear(@RequestBody Producto body, UriComponentsBuilder builder){
 
-        System.out.println("HOLA!");
         Producto creado = this.service.guardar(body);
 
         if(creado == null){
