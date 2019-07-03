@@ -1,5 +1,7 @@
 package isi.aepad.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -19,6 +21,7 @@ public class DetallePedido {
     private Double total;
 
     @ManyToOne
+    @JsonIgnore
     private Pedido pedido;
 
     //--- Getters & Setters ---//
