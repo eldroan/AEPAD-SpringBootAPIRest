@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,11 @@ public class ProductoResource {
 
     @GetMapping("producto")
     public ResponseEntity<List<Producto>> buscar(){
-        return new ResponseEntity<>(this.service.buscarTodas(), HttpStatus.OK);
+        try {
+            return new ResponseEntity<>(this.service.buscarRandom(20), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(new ArrayList<>(), HttpStatus.I_AM_A_TEAPOT);
+        }
     }
 
     @GetMapping("producto/{id}")

@@ -12,5 +12,5 @@ public interface ProductoService {
 
     void borrar(Integer id);
 
-    List<Producto> buscarTodas();
+    List<Producto> buscarRandom(int i) throws Exception;
 }
