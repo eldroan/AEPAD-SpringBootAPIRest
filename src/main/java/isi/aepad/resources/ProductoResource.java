@@ -24,6 +24,7 @@ public class ProductoResource {
         try {
             return new ResponseEntity<>(this.service.buscarRandom(20), HttpStatus.OK);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(new ArrayList<>(), HttpStatus.I_AM_A_TEAPOT);
         }
     }

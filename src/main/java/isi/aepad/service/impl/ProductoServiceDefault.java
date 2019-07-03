@@ -42,7 +42,7 @@ public class ProductoServiceDefault implements ProductoService {
         List<Producto> productos= null; //me traigo todos
 
         //Para no pegarle siempre al repository solo lo hago si es la primera vez y no hubieron modificaciones
-        if(productoCache != null && modified == false){
+        if(productoCache == null || modified == true){
             productoCache =repository.findAll(); //me traigo todos
             modified = false;
         }
@@ -72,6 +72,6 @@ public class ProductoServiceDefault implements ProductoService {
                 counter++;
             }
         }
-        return repository.findAll();
+        return productoRandom;
     }
 }
