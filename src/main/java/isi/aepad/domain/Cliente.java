@@ -1,5 +1,7 @@
 package isi.aepad.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,12 +19,14 @@ public class Cliente {
     private Localidad localidad;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
     private List<Pedido> pedidosRealizados;
 
     @OneToOne
     private MedioDePago medioDePago;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
     private List<Pago> pagosRealizados;
 
     private Double puntosAcumulados;
