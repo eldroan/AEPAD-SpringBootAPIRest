@@ -55,7 +55,8 @@ public class ProductoServiceDefault implements ProductoService {
             //Me estan pidiendo devolver mas valores de los que tengo
             String err = "La cantidad de productos requerida excede la cantidad de productos cargada";
             System.out.println(err);
-            throw new Exception(err);
+//            throw new Exception(err);
+            amountToReturn = size;
         }
 
         List<Producto> productoRandom = new ArrayList<>();
